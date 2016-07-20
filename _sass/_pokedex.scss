@@ -1,0 +1,781 @@
+$red: #C00D0D;
+$light-red: #FB7575;
+$dark-red: #600707;
+$burgundy: #8B0000;
+$green: #30DA0C;
+$light-green: #ACFB76;
+$dark-green: #137604;
+$leaf-green: #004846;
+$light-leaf-green: #008477;
+$blue: #2D77F9;
+$dark-blue: #0530E5;
+$turquoise: #A9E9F7;
+$dark-turquoise: #1DC6EC;
+$sky: #A0F2FA;
+$white: #FFFFFF;
+$grey: #B0B0B0;
+$yellow: #FFFF00;
+$light-yellow: #FBFB8A;
+$dark-yellow: #FFAB00;
+$sun: #FA9A05;
+$dark-sun: #FF9300;
+$orange: #FF9B5B;
+$dark-orange: #F66C1F;
+$charcoal: #494949;
+$black: #222222;
+$dark-black: #111111;
+
+@mixin linear-gradient($color1, $color2) {
+  background: linear-gradient($color1, $color2);
+}
+
+@mixin user-select($value) {
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+
+#pokedex {
+  margin: 150px auto auto auto;
+  width: 750px;
+  height: 500px;
+}
+
+#left {
+  position: relative;
+  float: left;
+  background-color: $red;
+  height: 500px;
+  width: 400px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  box-shadow: -10px 8px 1px 3px darken($red, 20%);
+}
+
+#right {
+  position: relative;
+  float:right;
+  margin-top: 75px;
+  background-color: $red;
+  height: 425px;
+  width: 350px;
+  border-bottom-right-radius: 30px;
+  box-shadow: -10px 8px 1px 3px darken($red, 20%);
+}
+
+#middle {
+  position: absolute;
+  z-index: 150;
+  margin-left: 350px;
+  height: 500px;
+  width: 50px;
+  background: linear-gradient(to right, $burgundy, $red, $burgundy);
+  box-shadow: 0px 5px 5px 3px darken($red, 20%);
+}
+
+#hinge1 {
+  position: absolute;
+  z-index: 20;
+  width: 50px;
+  height: 46px;
+  background: linear-gradient(to right, $dark-red, $red, $dark-red);
+  border-bottom: solid $dark-red 2px;
+  border-top: solid $dark-red 2px;
+}
+
+#hinge2 {
+  position: absolute;
+  z-index: 20;
+  margin-top: 100px;
+  width: 50px;
+  height: 46px;
+  background: linear-gradient(to right, $dark-red, $red, $dark-red);
+  border-bottom: solid $dark-red 2px;
+  border-top: solid $dark-red 2px;
+}
+
+#hinge3 {
+  position: absolute;
+  z-index: 20;
+  margin-top: 400px;
+  width: 50px;
+  height: 46px;
+  background: linear-gradient(to right, $dark-red, $red, $dark-red);
+  border-bottom: solid $dark-red 2px;
+  border-top: solid $dark-red 2px;
+}
+
+#top-right1 {
+  position: absolute;
+  z-index: 100;
+  margin: 50px auto auto 400px;
+  background-color: $red;
+  width: 200px;
+  height: 200px;
+  border-top-right-radius: 120px;
+}
+
+#top-right2 {
+  position: absolute;
+  z-index: 100;
+  margin: 0px auto auto 520px;
+  background-color: $white;
+  width: 230px;
+  height: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+#top-left {
+  position: absolute;
+  z-index: 20;
+  width: 350px;
+  height: 75px;
+  background-color: $burgundy;
+  border-top-left-radius: 30px;
+}
+
+#top-left1 {
+  position: absolute;
+  z-index: 110;
+  margin: 0px auto auto 0px;
+  background-color: $burgundy;
+  width: 230px;
+  height: 100px;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 30px;
+  box-shadow: -10px 8px 1px 3px darken($red, 20%);
+}
+
+#top-left2 {
+  position: absolute;
+  z-index: 100;
+  margin: 50px auto auto 150px;
+  background-color: $red;
+  width: 200px;
+  height: 200px;
+  border-top-left-radius: 120px;
+}
+
+#logo {
+  position: absolute;
+  z-index: 130;
+  margin: 200px auto auto 30px;
+}
+
+#glass-button {
+  position: absolute;
+  z-index: 110;
+  margin: 17px auto auto 17px;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient($turquoise, $dark-turquoise);
+  border-radius: 50px;
+  border-style: solid;
+  border-color: $white;
+  border-width: 5px;
+  box-shadow: 0px 0px 6px 4px darken($red, 20%);
+}
+
+#reflect {
+  position: absolute;
+  z-index: 120;
+  margin: 3px auto auto 15px;
+  width: 30px;
+  height: 17px;
+  background-color: $sky;
+  border-radius: 20px 15px;
+}
+
+#top-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 85px;
+  margin: 12px auto auto 100px;
+}
+
+#top-button-red {
+  z-index: 120;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient($light-red, $red);
+  border-radius: 50px;
+  box-shadow: 0px 0px 6px 2px darken($red, 20%);
+}
+
+#top-button-yellow {
+  z-index: 120;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient($light-yellow, $yellow);
+  background-color: $sky;
+  border-radius: 50px;
+  box-shadow: 0px 0px 6px 2px darken($red, 20%);
+}
+
+#top-button-green {
+  z-index: 120;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient($light-green, $green);
+  border-radius: 50px;
+  box-shadow: 0px 0px 6px 2px darken($red, 20%);
+}
+
+#border-screen {
+  position: absolute;
+  z-index: 100;
+  margin: 135px auto auto 25px;
+  background-color: $grey;
+  width: 300px;
+  height: 220px;
+  border-radius: 20px;
+  //box-shadow: 0px 0px 6px 2px darken($red, 20%);
+}
+
+#screen {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 110;
+  margin: 155px auto auto 45px;
+  background-color: $white;
+  width: 255px;
+  height: 140px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: $charcoal;
+}
+
+#screen img {
+  height: 130px;
+  width: auto;
+  border-radius: 15px;
+}
+
+.selectDisable {
+  @include user-select(none);
+}
+
+/*#border-screen::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 0 0 40px;
+  border-color: transparent transparent transparent $red;
+}*/
+
+#triangle {
+  position: absolute;
+  z-index: 120;
+  margin: 315px auto auto 25px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 0 0 40px;
+  border-color: transparent transparent transparent $red;
+}
+
+#button-top1 {
+  position: absolute;
+  z-index: 110;
+  margin: 4px auto auto 130px;
+  background: radial-gradient($light-red, $red);
+  border-radius: 100px;
+  border-style: solid;
+  border-color: $black;
+  border-width: 1px;
+  height: 10px;
+  width: 10px;
+}
+
+#button-top2 {
+  position: absolute;
+  z-index: 110;
+  margin: 4px auto auto 160px;
+  background: radial-gradient($light-red, $red);
+  border-radius: 100px;
+  border-style: solid;
+  border-color: $black;
+  border-width: 1px;
+  height: 10px;
+  width: 10px;
+}
+
+#button-bottom {
+  @include linear-gradient($red, $burgundy);
+  position: absolute;
+  z-index: 130;
+  margin: 178px auto auto 50px;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+  box-shadow: 0px 1px 0px 1px darken($red, 20%);
+  cursor: pointer;
+}
+
+#button-bottom:active {
+  box-shadow: none;
+  @include linear-gradient(darken($red, 40%), $red);
+  box-shadow: 0px 0px 10px 3px darken($red, 10%) inset;
+  border: $black solid 1px;
+}
+
+#border-screen p {
+  margin: 157px auto auto 180px;
+  font-size: 4em;
+  color: $charcoal;
+}
+
+#blue-button-left {
+  @include linear-gradient($blue, $dark-blue);
+  position: absolute;
+  z-index: 130;
+  margin: 385px auto auto 20px;
+  border-radius: 100px;
+  height: 55px;
+  width: 55px;
+  box-shadow: 0px 1px 0px 1px darken($dark-blue, 20%);
+  cursor: pointer;
+}
+
+#blue-button-left:active {
+  box-shadow: none;
+  @include linear-gradient(darken($blue, 40%), $blue);
+  box-shadow: 0px 0px 10px 3px darken($dark-blue, 10%) inset;
+  border: $black solid 1px;
+}
+
+#green-button-left {
+  @include linear-gradient($green, $dark-green);
+  position: absolute;
+  z-index: 130;
+  margin: 400px auto auto 100px;
+  border-radius: 100px;
+  height: 12px;
+  width: 50px;
+  box-shadow: -1px 1px 0px 1px darken($dark-green, 15%);
+  cursor: pointer;
+}
+
+#green-button-left:active {
+  box-shadow: none;
+  @include linear-gradient(darken($green, 40%), $green);
+  box-shadow: 0px 0px 10px 3px darken($green, 20%) inset;
+  border: darken($green, 30%) solid 1px;
+}
+
+#orange-button-left {
+  @include linear-gradient($orange, $dark-orange);
+  position: absolute;
+  z-index: 130;
+  margin: 400px auto auto 165px;
+  border-radius: 100px;
+  height: 12px;
+  width: 50px;
+  box-shadow: -1px 1px 0px 1px darken($dark-orange, 35%);
+  cursor: pointer;
+}
+
+#orange-button-left:active {
+  box-shadow: none;
+  @include linear-gradient(darken($orange, 20%), $orange);
+  box-shadow: 0px 0px 5px 3px darken($orange, 30%) inset;
+  border: darken($orange, 40%) solid 1px;
+}
+
+#square-button-left {
+  position: absolute;
+  z-index: 130;
+  margin: 430px auto auto 100px;
+  border-radius: 10px;
+  height: 55px;
+  width: 115px;
+  box-shadow: 0 0 20px $leaf-green inset, 0px 0px 5px 1px darken($red, 20%) ;
+  background-color: $light-leaf-green;
+  @include linear-gradient($light-leaf-green, $leaf-green);
+}
+
+#nb {
+  margin: 9px auto auto 20px;
+  width: 72px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-size: 2em;
+  text-align: center;
+  box-shadow: 0 0 7px $leaf-green inset;
+  border: solid $black 1px;
+}
+
+#cross {
+  position: absolute;
+  z-index: 130;
+  height: 90px;
+  width: 90px;
+  margin: 390px auto auto 240px;
+}
+
+#mid-cross {
+  position: absolute;
+  z-index: 130;
+  background-color: $black;
+  margin: 30px auto auto 30px;
+  width: 30px;
+  height: 30px;
+  box-shadow: -3px 2px $dark-black;
+}
+
+#top-cross {
+  position: absolute;
+  background-color: $black;
+  margin: 0px auto auto 30px;
+  width: 30px;
+  height: 30px;
+  box-shadow: -3px 2px $dark-black;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  cursor: pointer;
+}
+
+#right-cross {
+  position: absolute;
+  background-color: $black;
+  margin: 30px auto auto 60px;
+  width: 30px;
+  height: 30px;
+  box-shadow: -3px 2px $dark-black;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#bot-cross {
+  position: absolute;
+  z-index: 130;
+  background-color: $black;
+  margin: 60px auto auto 30px;
+  width: 30px;
+  height: 30px;
+  box-shadow: -3px 2px $dark-black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+#left-cross {
+  position: absolute;
+  z-index: 130;
+  background-color: $black;
+  margin: 30px auto auto 0px;
+  width: 30px;
+  height: 30px;
+  box-shadow: -3px 2px $dark-black;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#mid-circle {
+  position: absolute;
+  margin: 5px auto auto 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 30px;
+  background: radial-gradient($dark-black, $black);
+}
+
+#upC {
+  position: absolute;
+  margin: 8px auto auto 4px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent $dark-black transparent;
+}
+
+#rightC {
+  position: absolute;
+  margin: 6px auto auto 10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent $dark-black;
+}
+
+#downC {
+  position: absolute;
+  margin: 14px auto auto 4px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: $dark-black transparent transparent transparent;
+}
+
+#leftC {
+  position: absolute;
+  margin: 6px auto auto 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent $dark-black transparent transparent;
+}
+
+#info-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 130;
+  margin: 60px auto auto 30px;
+  border-radius: 10px;
+  height: 120px;
+  width: 290px;
+  box-shadow: 0 0 20px $dark-green inset, 0px 0px 5px 1px darken($red, 20%) ;
+  background-color: $green;
+  @include linear-gradient($light-green, $green);
+}
+
+#info-screen p {
+  font-size: 1.2em;
+}
+
+#keyboard {
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 75px;
+  width: 250px;
+  margin: 200px auto auto 50px;
+}
+
+.key {
+  @include linear-gradient($blue, $dark-blue);
+  z-index: 100;
+  height: 35px;
+  width: 47px;
+  border-radius: 4px;
+  box-shadow: -1px 1px 0px 2px darken($blue, 35%);
+  cursor: pointer;
+}
+
+.key:active {
+  @include linear-gradient(darken($blue, 40%), $blue);
+  box-shadow: 0px 0px 5px 2px darken($blue, 30%) inset, -1px 1px 0px 2px darken($blue, 35%);
+}
+
+#leaf-button-right {
+  @include linear-gradient($light-leaf-green, $leaf-green);
+  position: absolute;
+  z-index: 130;
+  margin: 300px auto auto 51px;
+  border-radius: 100px;
+  height: 12px;
+  width: 12px;
+  box-shadow: -1px 1px 0px 1px darken($leaf-green, 7%);
+  cursor: pointer;
+}
+
+#leaf-button-right:active {
+  box-shadow: none;
+  @include linear-gradient(darken($leaf-green, 30%), $light-leaf-green);
+  box-shadow: 0px 0px 5px 2px $leaf-green inset;
+  border: darken($light-leaf-green, 15%) solid 1px;
+}
+
+#yellow-button-right {
+  @include linear-gradient($yellow, $dark-yellow);
+  position: absolute;
+  z-index: 130;
+  margin: 300px auto auto 80px;
+  border-radius: 100px;
+  height: 12px;
+  width: 12px;
+  box-shadow: -1px 1px 0px 1px darken($dark-yellow, 35%);
+  cursor: pointer;
+}
+
+#yellow-button-right:active {
+  box-shadow: none;
+  @include linear-gradient(darken($dark-yellow, 20%), $yellow);
+  box-shadow: 0px 0px 5px 2px $orange inset;
+  border: darken($orange, 40%) solid 1px;
+}
+
+#green-button-right {
+  @include linear-gradient($green, $dark-green);
+  position: absolute;
+  z-index: 130;
+  margin: 300px auto auto 185px;
+  border-radius: 100px;
+  height: 12px;
+  width: 50px;
+  box-shadow: -1px 1px 0px 1px darken($dark-green, 15%);
+  cursor: pointer;
+}
+
+#green-button-right:active {
+  box-shadow: none;
+  @include linear-gradient(darken($green, 40%), $green);
+  box-shadow: 0px 0px 10px 3px darken($green, 20%) inset;
+  border: darken($green, 30%) solid 1px;
+}
+
+#orange-button-right {
+  @include linear-gradient($orange, $dark-orange);
+  position: absolute;
+  z-index: 130;
+  margin: 300px auto auto 250px;
+  border-radius: 100px;
+  height: 12px;
+  width: 50px;
+  box-shadow: -1px 1px 0px 1px darken($dark-orange, 35%);
+  cursor: pointer;
+}
+
+#orange-button-right:active {
+  box-shadow: none;
+  @include linear-gradient(darken($orange, 20%), $orange);
+  box-shadow: 0px 0px 5px 3px darken($orange, 30%) inset;
+  border: darken($orange, 40%) solid 1px;
+}
+
+#left-cross-button {
+  @include linear-gradient($grey, $charcoal);
+  position: absolute;
+  z-index: 100;
+  margin: 330px auto auto 51px;
+  height: 30px;
+  width: 40px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: -1px 1px 0px 2px darken($charcoal, 10%);
+  cursor: pointer;
+}
+
+#left-cross-button:active {
+  box-shadow: none;
+  @include linear-gradient(darken($grey, 50%), $grey);
+  box-shadow: 0px 0px 10px 3px darken($grey, 40%) inset;
+  border: darken($grey, 50%) solid 1px;
+}
+
+#right-cross-button {
+  @include linear-gradient($grey, $charcoal);
+  position: absolute;
+  z-index: 100;
+  margin: 330px auto auto 92px;
+  height: 30px;
+  width: 40px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: -1px 1px 0px 2px darken($charcoal, 10%);
+  cursor: pointer;
+}
+
+#right-cross-button:active {
+  box-shadow: none;
+  @include linear-gradient(darken($grey, 50%), $grey);
+  box-shadow: 0px 0px 10px 3px darken($grey, 40%) inset;
+  border: darken($grey, 50%) solid 1px;
+}
+
+#rightT {
+  position: absolute;
+  z-index: 130;
+  margin: 5px auto auto 16px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent darken($red, 15%);
+}
+
+#leftT {
+  position: absolute;
+  z-index: 130;
+  margin: 5px auto auto 12px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent darken($red, 15%) transparent transparent;
+}
+
+#cross-button {
+  @include linear-gradient($light-yellow, $dark-yellow);
+  position: absolute;
+  z-index: 130;
+  margin: 330px auto auto 270px;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+  box-shadow: -1px 1px 0px 1px darken($dark-yellow, 37%);
+  cursor: pointer;
+}
+
+#cross-button:active {
+  box-shadow: none;
+  @include linear-gradient(darken($orange, 20%), $yellow);
+  box-shadow: 0px 0px 5px 2px darken($dark-yellow, 20%) inset;
+  border: darken($orange, 45%) solid 1px;
+}
+
+#left-red-cross {
+  position: absolute;
+  z-index: 130;
+  margin: 7px auto auto 5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 15px 8px 0;
+  border-color: transparent darken($red, 15%) transparent transparent;
+}
+
+#square-button-right1 {
+  position: absolute;
+  z-index: 130;
+  margin: 375px auto auto 185px;
+  border-radius: 10px;
+  height: 40px;
+  width: 100px;
+  box-shadow: 0 0 20px $red inset, 0px 0px 5px 1px darken($red, 20%) ;
+  background-color: $dark-sun;
+  @include linear-gradient($yellow, $dark-sun);
+}
+
+#square-button-right2 {
+  position: absolute;
+  z-index: 130;
+  margin: 375px auto auto 70px;
+  border-radius: 10px;
+  height: 40px;
+  width: 100px;
+  box-shadow: 0 0 20px $red inset, 0px 0px 5px 1px darken($red, 20%) ;
+  background-color: $dark-sun;
+  @include linear-gradient($yellow, $dark-sun);
+}
+
+@media (max-width: 756px) {
+  #right, #top-right1, #top-right2, #border-screen, #screen, #cross, #blue-button-left, #green-button-left, #orange-button-left, #square-button-left{
+    display: none;
+  }
+  #top-left1 {
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 756px) {
+  #logo img {
+    display: none;
+  }
+}
