@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'digital_dream';
+    src: url('../fonts/DIGITALDREAMSKEWNARROW-webfont.eot');
+    src: url('../fonts/DIGITALDREAMSKEWNARROW-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DIGITALDREAMSKEWNARROW-webfont.woff') format('woff'),
+         url('../fonts/DIGITALDREAMSKEWNARROW-webfont.ttf') format('truetype'),
+         url('../fonts/DIGITALDREAMSKEWNARROW-webfont.svg#digital_dream_skew_narrowRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $red: #C00D0D;
 $light-red: #FB7575;
 $dark-red: #600707;
@@ -540,6 +551,9 @@ $dark-black: #111111;
   width: 290px;
   box-shadow: 0 0 20px $dark-green inset, 0px 0px 5px 1px darken($red, 20%) ;
   background-color: $green;
+  font-family: 'digital_dream';
+  color: darken($dark-green, 5%);
+  font-size: 1.2em;
   @include linear-gradient($light-green, $green);
 }
 
