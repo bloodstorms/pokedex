@@ -47,8 +47,21 @@ $dark-black: #111111;
   user-select: $value;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-image: url('../img/pokedex/background.png');
+}
+
 #pokedex {
-  margin: 150px auto auto auto;
   width: 750px;
   height: 500px;
 }
@@ -131,7 +144,7 @@ $dark-black: #111111;
   position: absolute;
   z-index: 100;
   margin: 0px auto auto 520px;
-  background-color: $white;
+  background-color: #D1E6FA;
   width: 230px;
   height: 100px;
   border-bottom-left-radius: 100px;
