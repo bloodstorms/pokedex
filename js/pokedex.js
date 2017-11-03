@@ -19,7 +19,7 @@ var pokemonList = ["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","C
 document.addEventListener("DOMContentLoaded", function(event) {
  document.getElementById('nb').value = 1;
  document.getElementById("info-screen").innerHTML = pokemonList[0];
- document.getElementById('screen').getElementsByTagName('img')[0].src = "/img/pokedex/pokemon/" + pokemonList[0] + ".jpg";
+ document.getElementById('screen').getElementsByTagName('img')[0].src = "{{ site.baseurl }}/img/pokedex/pokemon/" + pokemonList[0] + ".jpg";
 });
 
 function getElemPokemonList() {
@@ -44,7 +44,7 @@ function increaseIdPokemon() {
   }
   getElemIdPokemon();
   getElemPokemonList();
-  document.getElementById('screen').getElementsByTagName('img')[0].src = "img/pokedex/pokemon/" + pokemonList[idPokemon] + ".jpg";
+  document.getElementById('screen').getElementsByTagName('img')[0].src = "{{ site.baseurl }}/img/pokedex/pokemon/" + pokemonList[idPokemon] + ".jpg";
 }
 
 function decreaseIdPokemon() {
@@ -55,24 +55,24 @@ function decreaseIdPokemon() {
   }
   getElemIdPokemon()
   getElemPokemonList()
-  document.getElementById('screen').getElementsByTagName('img')[0].src = "img/pokedex/pokemon/" + pokemonList[idPokemon] + ".jpg";
+  document.getElementById('screen').getElementsByTagName('img')[0].src = "{{ site.baseurl }}/img/pokedex/pokemon/" + pokemonList[idPokemon] + ".jpg";
 }
 
 function updateIdPokemon(val) {
   if(val <= pokemonList.length) {
     idPokemon = parseInt(val) - 1
     document.getElementById("info-screen").innerHTML = pokemonList[idPokemon];
-    document.getElementById('screen').getElementsByTagName('img')[0].src = "img/pokedex/pokemon/" + pokemonList[idPokemon] + ".jpg";
+    document.getElementById('screen').getElementsByTagName('img')[0].src = "{{ site.baseurl }}/img/pokedex/pokemon/" + pokemonList[idPokemon] + ".jpg";
   } else {
       document.getElementById("info-screen").innerHTML = "this pokemon doesn't exist";
-      document.getElementById('screen').getElementsByTagName('img')[0].src = "img/pokedex/pokemon/Pokemon-disappointed.jpg";
+      document.getElementById('screen').getElementsByTagName('img')[0].src = "{{ site.baseurl }}/img/pokedex/pokemon/Pokemon-disappointed.jpg";
   }
 }
 
 function changePicturePokemon() {
   if(idPokemon == 24) {
-    document.getElementById('screen').getElementsByTagName('img')[0].src = "img/pokedex/pokemon/Pikachu-drug.gif";
+    document.getElementById('screen').getElementsByTagName('img')[0].src = "{{ site.baseurl }}/img/pokedex/pokemon/Pikachu-drug.gif";
   } else {
-    document.getElementById('screen').getElementsByTagName('img')[0].src = "img/pokedex/pokemon/" + pokemonList[idPokemon] + ".jpg";
+    document.getElementById('screen').getElementsByTagName('img')[0].src = "{{ site.baseurl }}/img/pokedex/pokemon/" + pokemonList[idPokemon] + ".jpg";
   }
 }
