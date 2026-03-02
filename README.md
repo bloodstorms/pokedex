@@ -1,1 +1,3 @@
-# Pokedex CSS
+# Pokedex
+
+https://bloodstorms.github.io/pokedex/
